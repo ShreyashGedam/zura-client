@@ -1,0 +1,54 @@
+.container {
+    /* border: 1px solid; */
+    margin: auto;
+    width: 92%;
+    margin-top: 6.0vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.breadcrump_left {
+    display: flex;
+}
+
+.breadcrump_left img {
+    cursor: pointer;
+}
+
+.breadcrump_left p {
+    font-family: Roboto;
+    font-size: 3.2176vh;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 4.5965vh;
+    letter-spacing: 0.23px;
+    margin-top: 2.5vh;
+    margin-left: 1vh;
+}
+
+.selected_tab {
+    margin-left: 1.0vh;
+    color: #7E22CE;
+}
+
+.breadcrump_right {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrump_right p {
+    color: #1E1E1E;
+    font-family: Roboto;
+    font-size: 3.25vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 1.9vh;
+}
+
+.breadcrump_right div {
+    width: 6.0vh;
+    height: 6.0vh;
+    margin-right: 5.0vh;
+}

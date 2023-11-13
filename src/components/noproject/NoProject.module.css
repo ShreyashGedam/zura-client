@@ -1,0 +1,57 @@
+.container {
+    /* border: 1px solid; */
+    margin: auto;
+    width: 77.5%;
+    text-align: center;
+}
+
+.heading {
+    color: #7E22CE;
+    font-family: Roboto;
+    font-size: 7.3411vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.image_box {
+    /* border: 1px solid; */
+    margin: auto;
+    height: 36.1vh;
+    width: 53.0vh;
+    margin-top: 2.5vh; 
+}
+
+.paragraph {
+    color: #838383;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 3.5vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 3.333vh;
+}
+
+.new_project {
+    width: 56.9827vh;
+    height: 10.9916vh;
+    border-radius: 1.289vh;
+    background: #211935;
+    margin: auto;
+    margin-top: 1.1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.new_project p {
+    color: #F8F8F8;
+    font-family: Roboto;
+    font-size: 4.628vh;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 1.682vh;
+}

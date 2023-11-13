@@ -1,0 +1,121 @@
+.container {
+    /* border: 1px solid white; */
+    margin: auto;
+    width: 92%;
+    margin-top: 5.3vh;
+    margin-bottom: 11.3vh;
+}
+
+.upload {
+    color: #7E22CE;
+    font-family: Roboto; 
+    font-size: 5.5vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.cardbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 6.6vh;
+    gap: 4.1vh;
+}
+
+.cardbox>div {
+    display: flex;
+    align-items: center;
+    min-width: 38.0vh;
+    cursor: pointer;
+    min-height: 13.9vh;
+    border-radius: 2.2vh;
+    border: 1px solid #999;
+    background: #FFF;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.06), 1px 2px 5px 0px rgba(0, 0, 0, 0.06), 4px 8px 9px 0px rgba(0, 0, 0, 0.05), 9px 18px 12px 0px rgba(0, 0, 0, 0.03), 16px 32px 14px 0px rgba(0, 0, 0, 0.01), 25px 49px 16px 0px rgba(0, 0, 0, 0.00);
+}
+
+.cardbox img {
+    margin-left: 2.6vh;
+    margin-right: 3.5vh;
+}
+
+.cardbox p {
+    color: #3C3C3C;
+    font-family: Roboto;
+    font-size: 2.6643vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.3061vh;
+    letter-spacing: 0.19px;
+}
+
+.or {
+    color: #999;
+    font-family: Roboto;
+    font-size: 3.672vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 4.7vh;
+    text-align: center;
+}
+
+.upload_box {
+    /* height: 39.5vh; */
+    border-radius: 2.0vh;
+    border: .4vh dashed #999;
+    margin-top: 2.9vh;
+    margin-bottom: 11.3vh;
+} 
+
+.upload_box img {
+    margin: auto;
+    margin-top: 3.4vh;
+    margin-bottom: 2.1vh;
+}
+
+.drop {
+    color: #49454F;
+    font-family: Roboto;
+    font-size: 3.0332vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: .7vh;
+}
+
+.drop2 {
+    color: rgba(0, 0, 0, 0.40);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 2.4vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 3.3vh;
+}
+
+.lable {
+    height: 7.7vh;
+    width: 21.9vh;
+    border-radius: 19.25vh;
+    border: 1.925px solid #7E22CE;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 5vh;
+}
+
+.lable p {
+    color: #7E22CE;
+    font-family: Roboto;
+    font-size: 2.0vh;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.0vh;
+    letter-spacing: 0.1px;
+}

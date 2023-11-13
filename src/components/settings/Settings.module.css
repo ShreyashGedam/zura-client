@@ -1,0 +1,116 @@
+.container {
+    width: 92%;
+    margin: auto;
+    margin-top: 6vh;
+}
+
+.heading {
+    color: #7E22CE;
+    font-family: Roboto;
+    font-size: 5.5vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    align-items: center;
+}
+
+.main img {
+    width: 20.8vh;
+    height: 20.8vh;
+}
+
+.inputdetails p {
+    color: #3C3C3C;
+    font-family: Roboto;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1.1vh;
+}
+
+.savebutton {
+    width: 19.1708vh;
+    height: 6.1425vh;
+    background-color: #7E22CE;
+    color: white;
+    margin-top: 1.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vh;
+    cursor: pointer;
+}
+
+.savebutton p {
+    font-size: 2.2vh;
+}
+
+.upgradeplan {
+    border-radius: 15.827px;
+    border: 0.719px solid #7E22CE;
+    height: 12.4vh;
+    margin-top: 3.3vh;
+    background: linear-gradient(90deg, #7E22CE 0.95%, #460281 99.9%);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.06), 0.71942px 1.43885px 3.59712px 0px rgba(0, 0, 0, 0.06), 2.8777px 5.7554px 6.47482px 0px rgba(0, 0, 0, 0.05), 6.47482px 12.94964px 8.63309px 0px rgba(0, 0, 0, 0.03), 11.51079px 23.02158px 10.07194px 0px rgba(0, 0, 0, 0.01), 17.98561px 35.2518px 11.51079px 0px rgba(0, 0, 0, 0.00);
+}
+
+.upgradeplan {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.upgradetext {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 3.8861vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.upgradetext span {
+    font-weight: 700;
+    text-decoration-line: underline;
+}
+
+.upgradebutton {
+    width: 19.1708vh;
+    height: 6.1425vh;
+    background-color: #FFF;
+    border-radius: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.upgradebutton p {
+    color: #7E22CE;
+    font-family: Roboto;
+    font-size: 2.524vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.132vh;
+    letter-spacing: .018vh;
+}
+
+.cancle {
+    margin-top: 3.1vh;
+    color: #FF274C;
+    font-family: Roboto;
+    font-size: 2.524vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.132vh;
+    text-decoration-line: underline;
+    cursor: pointer;
+    margin-bottom: 10vh;
+}

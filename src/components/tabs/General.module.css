@@ -1,0 +1,27 @@
+.container {
+    margin-top: 5vh;
+}
+
+.heading {
+    color: #3C3C3C;
+    font-family: Roboto;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 2vh;
+}
+
+.helpertext {
+    margin-top: .8vh;
+    color: #646464;
+    font-family: Roboto;
+    font-size: 1.6vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main {
+    margin-bottom: 1.6vh;
+}

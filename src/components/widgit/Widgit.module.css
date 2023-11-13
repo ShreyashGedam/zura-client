@@ -1,0 +1,19 @@
+.container {
+    margin: auto;
+    width: 92%;
+    margin-top: 5.3vh;
+    margin-bottom: 11.3vh;
+}
+
+.upload {
+    color: #7E22CE; 
+    font-family: Roboto;
+    font-size: 5.5vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.tabs{
+    margin-top: 7.0vh;
+}

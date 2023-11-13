@@ -1,0 +1,75 @@
+/* .container {
+   
+} */
+
+.logo_box {
+    /* border: 1px solid; */
+    height: 5.284vh;
+    display: flex;
+    margin: auto;
+    margin-top: 2.9vh;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.logo_box p {
+    color: #7E22CE;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 3.7743vh;
+    font-style: normal;
+    line-height: normal;
+    margin-left: 0.679vh;
+}
+
+.icons {
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 3.7vh;
+}
+
+.icons img:first-child {
+    margin-right: 1.9vh;
+}
+
+.icons img {
+    cursor: pointer;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.back_home {
+    cursor: pointer;
+    width: 19.8692vh;
+    height: 4.1vh;
+    margin-left: 18.5vh;
+    margin-top: 4.965vh;
+    border-radius: 3.5323vh;
+    border: 0.075vh solid #999;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.06), 0.75032px 1.50064px 3.75159px 0px rgba(0, 0, 0, 0.06), 3.00127px 6.00254px 6.75286px 0px rgba(0, 0, 0, 0.05), 6.75286px 13.50572px 9.00381px 0px rgba(0, 0, 0, 0.03), 12.00508px 24.01017px 10.50445px 0px rgba(0, 0, 0, 0.01), 18.75794px 36.76557px 12.00508px 0px rgba(0, 0, 0, 0.00);
+}
+
+.back_home p {
+    color: #3C3C3C;
+    font-family: Roboto;
+    font-size: 2.0999vh;
+    font-style: normal;
+    line-height: normal;
+    margin-left: 0.56vh;
+    margin-top: 0.4vh;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+}
+
