@@ -50,7 +50,7 @@ export const ProjectModal = (props) => {
               marginRight={"2vh"}
               onClick={toggleModal}
             >
-              Cancle
+              Cancel
             </chakra.button>
             <chakra.button
               px="10"
