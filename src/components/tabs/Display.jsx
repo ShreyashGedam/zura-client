@@ -180,11 +180,7 @@ export const Display = () => {
       <div className={styles.bot}>
         <p>Bot Icon</p>
         <div>
-          {imgUrl ? (
-            <img className={styles.urlImage} src={imgUrl} />
-          ) : (
-            <div className={styles.botimage}></div>
-          )}
+          <img className={styles.urlImage} src={imgUrl} />
           {loading ? (
             <div>
               <div
