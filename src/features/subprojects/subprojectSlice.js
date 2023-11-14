@@ -124,7 +124,11 @@ export const subprojectSlice = createSlice({
           task._id === payload._id ? payload : task
         );
       })
+      .addCase(botIcon.pending, (state) => {
+        state.loading = true;
+      })
       .addCase(botIcon.fulfilled, (state, { payload }) => {
+        state.loading = false;
         state.tasks = state.tasks.map((task) =>
           task.projectId._id === payload._id
             ? { ...task, projectId: payload }

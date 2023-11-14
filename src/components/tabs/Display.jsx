@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Display.module.css";
-import { Switch, Select, Input } from "@chakra-ui/react";
+import { Switch, Select, Input, Spinner } from "@chakra-ui/react";
 import upload from "/upload.svg";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,7 +12,7 @@ export const Display = () => {
   const params = useParams();
   const dispatch = useDispatch();
   const { projectId } = params;
-  const { tasks } = useSelector((state) => state.subproject);
+  const { tasks, loading } = useSelector((state) => state.subproject);
   const imgUrl = tasks[0]?.projectId?.botImage;
 
   const handleChange = async (e) => {
@@ -185,21 +185,35 @@ export const Display = () => {
           ) : (
             <div className={styles.botimage}></div>
           )}
-          <input
-            type="file"
-            style={{ display: "none" }}
-            id="fileInput"
-            onChange={handleChange}
-          />
-          <label htmlFor="fileInput" onChange={handleChange}>
+          {loading ? (
             <div>
-              <div className={styles.uploadbutton}>
-                <p>Upload Image</p>
-                <img src={upload} alt="" />
+              <div
+                className={styles.uploadbutton}
+                style={{ justifyContent: "center" }}
+              >
+                <Spinner size="md" color="white" />
               </div>
               <p className={styles.bothelper}>Recommended Size: 48x48px</p>
             </div>
-          </label>
+          ) : (
+            <>
+              <input
+                type="file"
+                style={{ display: "none" }}
+                id="fileInput"
+                onChange={handleChange}
+              />
+              <label htmlFor="fileInput" onChange={handleChange}>
+                <div>
+                  <div className={styles.uploadbutton}>
+                    <p>Upload Image</p>
+                    <img src={upload} alt="" />
+                  </div>
+                  <p className={styles.bothelper}>Recommended Size: 48x48px</p>
+                </div>
+              </label>
+            </>
+          )}
         </div>
       </div>
     </div>
