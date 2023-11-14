@@ -42,10 +42,8 @@ export const Projects = () => {
           >
             <div className={styles.heading_box}>
               <p>
-                {e.projectName.split(" ")[0].split("")[0]}
-                {e.projectName.split(" ")[1].split("")[0].toUpperCase()
-                  ? e.projectName.split(" ")[1].split("")[0].toUpperCase()
-                  : e.projectName.split(" ")[0].split("")[1]}
+                {e.projectName.split("")[0]}
+                {e.projectName.split("")[1].toUpperCase()}
               </p>
             </div>
             <div className={styles.card_content}>
