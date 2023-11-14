@@ -7,6 +7,7 @@ import {
   Tab,
   TabPanel,
   Input,
+  Spinner,
 } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser, signup } from "../../features/user/userSlice";
@@ -18,6 +19,7 @@ export const Auth = () => {
   const { error } = useSelector((state) => state.user);
   const [emptyFieldSignup, setEmptyFieldSignup] = useState(false);
   const [emptyFieldlogin, setEmptyFieldlogin] = useState(false);
+  const { loading } = useSelector((state) => state.user);
 
   const handleSignup = () => {
     setEmptyFieldSignup(false);
@@ -116,7 +118,7 @@ export const Auth = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <div className={styles.login} onClick={handleLogin}>
-                  <p>Login</p>
+                  {loading ? <Spinner color="white" /> : <p>Login</p>}
                 </div>
               </div>
             </TabPanel>
@@ -157,7 +159,7 @@ export const Auth = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <div className={styles.login} onClick={handleSignup}>
-                  <p>Sign Up</p>
+                  {loading ? <Spinner color="primary" /> : <p>Sign Up</p>}
                 </div>
               </div>
             </TabPanel>

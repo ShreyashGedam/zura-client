@@ -1,9 +1,9 @@
-import { Input } from "@chakra-ui/react";
+import { Input, Spinner } from "@chakra-ui/react";
 import styles from "./UploadModal.module.css";
 import cross from "/cross.svg";
 import youtube from "/youtubesmall.svg";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addTask } from "../../features/subprojects/subprojectSlice";
 
 export const UploadModal = (props) => {
@@ -11,6 +11,7 @@ export const UploadModal = (props) => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
+  const { loading } = useSelector((state) => state.subproject);
 
   const handleChage = () => {
     if (!link || !name) return;
@@ -50,7 +51,7 @@ export const UploadModal = (props) => {
             onChange={(e) => setLink(e.target.value)}
           />
           <div className={styles.upload} onClick={handleChage}>
-            <p>Upload</p>
+            {loading ? <Spinner color="white" /> : <p>Upload</p>}
           </div>
         </div>
       </div>

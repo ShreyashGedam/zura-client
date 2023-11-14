@@ -125,7 +125,6 @@ export const subprojectSlice = createSlice({
         );
       })
       .addCase(botIcon.fulfilled, (state, { payload }) => {
-        console.log(payload);
         state.tasks = state.tasks.map((task) =>
           task.projectId._id === payload._id
             ? { ...task, projectId: payload }
