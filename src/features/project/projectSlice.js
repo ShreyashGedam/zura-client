@@ -6,7 +6,8 @@ const initialState = {
   projects: [],
   loading: false,
   error: false,
-}; 
+  currentProject: {},
+};
 
 export const addProject = createAsyncThunk(
   "addProject",
@@ -20,13 +21,51 @@ export const addProject = createAsyncThunk(
         return rejectWithValue(err.response);
       });
   }
-); 
+);
 
 export const getProjects = createAsyncThunk(
   "getProject",
   async (data, { rejectWithValue }) => {
     return await axios
       .get(`${EDNPOINT}/project/${data}`)
+      .then((res) => {
+        return res.data;
+      })
+      .catch((err) => {
+        return rejectWithValue(err.response);
+      });
+  }
+);
+
+export const getCurrent = createAsyncThunk(
+  "currentProject",
+  async (data, { rejectWithValue }) => {
+    return await axios
+      .get(`${EDNPOINT}/project/single/${data}`)
+      .then((res) => {
+        return res.data;
+      })
+      .catch((err) => {
+        return rejectWithValue(err.response);
+      });
+  }
+);
+
+export const botIcon = createAsyncThunk(
+  "botIcon",
+  async (data, { rejectWithValue }) => {
+    return await axios
+      .post(
+        `${EDNPOINT}/project/botimage/${data.projectId}`,
+        {
+          image: data.image,
+        },
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      )
       .then((res) => {
         return res.data;
       })
@@ -65,6 +104,16 @@ export const projectSlice = createSlice({
       .addCase(getProjects.rejected, (state) => {
         state.error = true;
         state.loading = false;
+      })
+      .addCase(getCurrent.fulfilled, (state, { payload }) => {
+        state.currentProject = payload;
+      })
+      .addCase(botIcon.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(botIcon.fulfilled, (state, { payload }) => {
+        state.loading = false;
+        state.currentProject = payload;
       });
   },
 });

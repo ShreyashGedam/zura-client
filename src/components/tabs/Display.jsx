@@ -4,7 +4,7 @@ import { Switch, Select, Input, Spinner } from "@chakra-ui/react";
 import upload from "/upload.svg";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { botIcon } from "../../features/subprojects/subprojectSlice";
+import { botIcon } from "../../features/project/projectSlice";
 
 export const Display = () => {
   const [color, setColor] = useState("");
@@ -12,8 +12,8 @@ export const Display = () => {
   const params = useParams();
   const dispatch = useDispatch();
   const { projectId } = params;
-  const { tasks, loading } = useSelector((state) => state.subproject);
-  const imgUrl = tasks[0]?.projectId?.botImage;
+  const { loading, currentProject } = useSelector((state) => state.project);
+  const imgUrl = currentProject.botImage;
 
   const handleChange = async (e) => {
     const selectedFile = e.target.files[0];

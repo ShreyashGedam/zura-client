@@ -65,30 +65,6 @@ export const deleteTask = createAsyncThunk(
   }
 );
 
-export const botIcon = createAsyncThunk(
-  "botIcon",
-  async (data, { rejectWithValue }) => {
-    return await axios
-      .post(
-        `${EDNPOINT}/project/botimage/${data.projectId}`,
-        {
-          image: data.image,
-        },
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      )
-      .then((res) => {
-        return res.data;
-      })
-      .catch((err) => {
-        return rejectWithValue(err.response);
-      });
-  }
-);
-
 export const subprojectSlice = createSlice({
   name: "subproject",
   initialState,
@@ -122,17 +98,6 @@ export const subprojectSlice = createSlice({
       .addCase(editTask.fulfilled, (state, { payload }) => {
         state.tasks = state.tasks.map((task) =>
           task._id === payload._id ? payload : task
-        );
-      })
-      .addCase(botIcon.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(botIcon.fulfilled, (state, { payload }) => {
-        state.loading = false;
-        state.tasks = state.tasks.map((task) =>
-          task.projectId._id === payload._id
-            ? { ...task, projectId: payload }
-            : task
         );
       })
       .addCase(deleteTask.fulfilled, (state, { payload }) => {
